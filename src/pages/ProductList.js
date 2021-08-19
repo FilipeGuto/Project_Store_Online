@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 
 import { getProductsFromCategoryAndQuery as ApiProducts } from '../services/api';
 
-import ProductCard from '../components/ProductCard';
-import img from '../image/Search.png';
 import CategoryFilter from '../components/CategoryFilter';
 import CartButton from '../components/CartButton';
 import MainProductList from '../components/MainProductList';
@@ -66,7 +64,7 @@ class ProductList extends React.Component {
                 data-testid="query-button"
                 onClick={ this.handleSearchButton }
               >
-                🔎
+                Pesquisar
               </button>
             </div>
             <CartButton />

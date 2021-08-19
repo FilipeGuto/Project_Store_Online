@@ -71,7 +71,7 @@ class CostumerEvaluation extends React.Component {
     const { evaluation, evaluations } = this.state;
     const { email, opinion, rating } = evaluation;
     return (
-      <div>
+      <div className="evaluation-div">
         <h3>Avalie o produto:</h3>
         <div>
           <form>
@@ -83,6 +83,7 @@ class CostumerEvaluation extends React.Component {
                 onChange={ this.updateState }
                 placeholder="Digite seu email..."
                 required
+                className="evaluation-text-input"
               />
             </div>
             <div>

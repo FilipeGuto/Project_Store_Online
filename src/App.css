@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 .input-button {
@@ -43,6 +44,11 @@
   min-width: 25%;
 }
 
+.div-productdetail-img img {
+  min-height: 100%;
+  min-width: 99.5%;
+}
+
 .div-productdetail-specification {
   border: 1px solid black;
   min-height: 250px;
@@ -67,7 +73,6 @@
   display: flex;
   background-color: white;
   justify-content: space-between;
-  height: 100vh;
 }
 
 .category-div {
@@ -76,6 +81,7 @@
   padding: 10px;
   border: 2px solid black;
   border-radius: 0px 10px 10px 0px;
+  min-height: fit-content;
 }
 
 .content-div {
@@ -85,6 +91,7 @@
   padding: 10px;
   border: 2px solid black;
   border-radius: 10px 0px 0px 10px;
+  min-height: fit-content;
 }
 
 .shopcart-img {
@@ -111,3 +118,233 @@
   width: 0;
   visibility: hidden;
 }
+
+.product-div {
+  border: 2px solid black;
+  max-width: 250px;
+  min-width: 250px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 21px 20px;
+  background-color: #a4bfc8;
+  box-shadow: 3px 5px 6px 1px rgba(0,0,0,0.61);
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-list-img {
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 250px;
+  min-height: 250px;
+}
+
+.product-list-addcart-button {
+  text-transform: uppercase;
+  min-width: 100%;
+  height: 35px;
+  border-radius: 10px;
+  color: black;
+  font-style: oblique;
+}
+
+.product-list-title-div {
+  min-height: 75px;
+  text-align: center;
+}
+
+.product-list-link {
+  color: black;
+}
+
+.product-div p {
+  text-align: center;
+}
+
+.product-list-shipping-div {
+  text-align: center;
+}
+
+.content-div button {
+  width: 100px;
+  height: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.content-div input {
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.product-detail-info-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.div-productdetail-specification li {
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+.div-productdetail {
+  background-color: #77929b;
+  padding: 30px;
+  margin: 0px;
+}
+
+.div-productdetail-specification {
+  background-color: #a4bfc8;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.div-productdetail button {
+  width: 200px;
+  height: 30px;
+  margin: 20px 0px
+}
+
+.div-productdetail-specification h2 {
+  text-align: center;
+}
+
+.price-button-div {
+  text-align: center;
+}
+
+.evaluation-div textarea {
+  min-width: 440px;
+  min-height: 50px;
+  margin: 15px 0px
+}
+
+.evaluation-text-input{
+  min-width: 438px;
+}
+
+.evaluation-div {
+  background-color: #F8F8FF;
+  margin-top: 10px;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.evaluation-card-div {
+  margin-top: 10px;
+  border: 1px dotted black;
+}
+
+.evaluation-card-div h4 {
+  margin: 5px 0px;
+}
+
+.shopping-card-div {
+  border: 1px solid black;
+  margin: 10px 0px;
+  display: flex;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #F8F8FF;
+}
+
+.shoppingcart-quantity-div {
+  display: flex;
+}
+
+.shopping-card-div div {
+  margin: 5px 0px;
+}
+
+.shoppingcart-quantity-div button{
+  min-width: 20px;
+  min-height: 5px;
+  margin: 0px 5px;
+}
+
+.shoppingcart-page-div {
+  padding: 10px;
+  min-height: 100vh;
+  background-color: #a4bfc8;
+}
+
+.finish-buy-button {
+  min-width: 150;
+  min-height: 30px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: #77929b;
+  font-weight: bolder;
+}
+
+.buyer-info-div div {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0px;
+}
+
+.buyer-info-div input {
+  border-radius: 10px;
+  min-height: 20px;
+  margin: 5px 0px;
+  padding: 5px;
+  max-width: 50%;
+}
+
+.checkout-main {
+  border: 1px solid black;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #a4bfc8;
+}
+
+.checkout-main section h2 {
+text-align: center;
+font-style: oblique;
+}
+
+.product-review {
+  margin: 10px 0px;
+}
+
+.payment-method-div {
+  margin: 10px 0px
+}
+
+.payment-method-div div{
+  margin: 10px 0px
+}
+
+.payment-icons {
+  max-width: 40px;
+}
+
+.payment-icons2 {
+  max-width: 45px;
+}
+
+.checkout-main section nav button {
+  min-width: 130px;
+  min-height: 40px;
+  border-radius: 10px;
+  background-color: #77929b;
+  }
+
+  .payment-method-div div input{
+    margin: 5px 5px
+  }
+
+  .checked-icon {
+    max-width: 20px;
+  }

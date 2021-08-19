@@ -6,18 +6,15 @@ class EvaluationCard extends React.Component {
     const { evaluation } = this.props;
     const { email, opinion, rating } = evaluation;
     return (
-      <div>
+      <div className="evaluation-card-div">
         <h4>
-          Email:
-          {email}
+          {`Email: ${email}`}
         </h4>
         <p>
-          Opinião:
-          {opinion}
+          {`Opinião: ${opinion}`}
         </p>
         <p>
-          Avaliação:
-          {rating}
+          {`Avaliação: ${rating}`}
         </p>
       </div>
     );

@@ -8,26 +8,29 @@ class ShoppingCartCards extends React.Component {
       <div>
         {cartProducts.map((product) => (
           <div key={ product.id }>
-            <h4 data-testid="shopping-cart-product-name">{product.title}</h4>
-            <p>Quantidade:</p>
-            <button
-              type="button"
-              data-testid="product-decrease-quantity"
-              onClick={ () => handleQuant(product, '-') }
-            >
-              -
-            </button>
-            <p data-testid="shopping-cart-product-quantity">{product.quant}</p>
-            <button
-              type="button"
-              data-testid="product-increase-quantity"
-              onClick={ () => handleQuant(product, '+') }
-            >
-              +
-            </button>
+            <div>
+              <h4 data-testid="shopping-cart-product-name">{product.title}</h4>
+            </div>
+            <div className="shoppingcart-quantity-div">
+              <p>Quantidade:</p>
+              <p data-testid="shopping-cart-product-quantity">{`${product.quant} Unds.`}</p>
+              <button
+                type="button"
+                data-testid="product-decrease-quantity"
+                onClick={ () => handleQuant(product, '-') }
+              >
+                -
+              </button>
+              <button
+                type="button"
+                data-testid="product-increase-quantity"
+                onClick={ () => handleQuant(product, '+') }
+              >
+                +
+              </button>
+            </div>
             <p>
-              Price:
-              {product.price * product.quant}
+              {`Price: R$${product.price * product.quant}`}
             </p>
           </div>
         ))}

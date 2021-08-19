@@ -1,6 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import img from '../image/Return.png';
+import img2 from '../image/Elo.png';
+import img3 from '../image/Visa.png';
+import img4 from '../image/Boleto.png';
+import img5 from '../image/Master.png';
+import img6 from '../image/Checked.png';
 
 class Checkout extends React.Component {
   fullName() {
@@ -79,21 +85,21 @@ class Checkout extends React.Component {
     const { cart } = this.props;
     const total = cart.reduce((acc, { price }) => (acc + price), 0).toFixed(2);
     return (
-      <main>
+      <main className="checkout-main">
         <header>
           <Link to="/">
-            <img src="" alt="voltar" />
+            <img className="shopcart-img" src={ img } alt="botão de retornar" />
           </Link>
         </header>
         <section>
-          <h3>Finalizar Compras</h3>
-          <div>
+          <h2>Finalizar Compras</h2>
+          <div className="product-review">
             <h4>Revise seus Produtos</h4>
             <table>
               <tbody>
                 {cart.map(({ id, title, price }) => (
                   <tr key={ id }>
-                    <td><img src="" alt="checked" /></td>
+                    <td><img className="checked-icon" src={ img6 } alt="checked" /></td>
                     <td>{`${title}`}</td>
                     <td>R$: </td>
                     <td>{price}</td>
@@ -106,7 +112,7 @@ class Checkout extends React.Component {
               {total}
             </h4>
           </div>
-          <div>
+          <div className="buyer-info-div">
             <h4>Informações do Comprador</h4>
             <div>
               {this.fullName()}
@@ -117,24 +123,21 @@ class Checkout extends React.Component {
               {this.address()}
             </div>
           </div>
-          <div>
+          <div className="payment-method-div">
             <h4>Método de Pagamento</h4>
             <div>
               <span>Boleto: </span>
               <input type="radio" id="boleto" name="payment" />
-              <img src="" alt="Ícone de Boleto" />
+              <img className="payment-icons" src={ img4 } alt="Ícone de Boleto" />
             </div>
             <div>
               <p>Cartão de Crédito: </p>
               <input type="radio" id="visa" name="payment" />
-              <span>Visa</span>
-              <img src="" alt="Ícone do Cartão Visa" />
+              <img className="payment-icons" src={ img3 } alt="Ícone do Cartão Visa" />
               <input type="radio" id="master" name="payment" />
-              <span>Master</span>
-              <img src="" alt="Ícone do Cartão Master" />
+              <img className="payment-icons" src={ img5 } alt="Ícone do Cartão Master" />
               <input type="radio" id="elo" name="payment" />
-              <span>Elo</span>
-              <img src="" alt="Ícone do Cartão Elo" />
+              <img className="payment-icons2" src={ img2 } alt="Ícone do Cartão Elo" />
             </div>
           </div>
           <nav>
